@@ -10,19 +10,7 @@ const overpass = Overpass({
 });
 
 const acorn = localFont({
-  src: [
-    {
-      path: "./fonts/Acorn-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-
-    {
-      path: "./fonts/Acorn-Medium.woff2",
-      weight: "700",
-      style: "normal",
-    },
-  ],
+  src: "./fonts/Acorn-Medium.woff2",
   variable: "--font-acorn",
 });
 
