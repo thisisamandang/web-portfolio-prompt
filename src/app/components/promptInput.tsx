@@ -1,34 +1,21 @@
 "use client";
 import React, { useState, ChangeEvent } from "react";
 import { GrSend } from "react-icons/gr";
-type Props = {};
+type Props = { setDialog: (arg0: boolean) => void };
 
 const PromptInput = (props: Props) => {
   const [inputValue, setInputValue] = useState("");
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    handleDialog(event.target.value);
     setInputValue(event.target.value);
   };
 
-  return (
-    // <div className="md:w-1/2 border border-black rounded-2xl mb-3  h-16 px-6 flex justify-between items-center">
-    //   <div className="text-gray-400 absolute transform top-1/2 left-6 -translate-y-1/2 opacity-90">
-    //     <span> Tip: Press </span>{" "}
-    //     <span className="bg-gray-700 border-[1px] border-gray-400 text-xs w-5 h-2 rounded-sm mx-1 px-1.5 py-0.5">
-    //       {" "}
-    //       /
-    //     </span>{" "}
-    //     <span> for Menu </span>
-    //   </div>
-    //   <input
-    //     placeholder="Tip: Press '/' for Menu "
-    //     className="outline-none transform bg-transparent p-2 w-[90%] max-lg:w-[80%]"
-    //   />
+  const handleDialog = (value: string) => {
+    props.setDialog(value === "/");
+  };
 
-    //   <button className="p-2  rounded-xl">
-    //     <GrSend className="h-5 w-5" />
-    //   </button>
-    // </div>
+  return (
     <div className="relative md:w-1/2 border font-mono  border-black rounded-xl mb-3 pl-4 h-16 md:px-4 flex justify-between items-center w-4/5 select-none bg-white/5 ">
       <div className="text-gray-600 absolute transform top-1/2 md:left-8 left-4 -translate-y-1/2 opacity-90">
         {inputValue ? null : (
@@ -63,3 +50,6 @@ const PromptInput = (props: Props) => {
 };
 
 export default PromptInput;
+function setDialog(arg0: boolean) {
+  throw new Error("Function not implemented.");
+}

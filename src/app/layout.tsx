@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Favicon from "/public/favicon.ico";
 import { Overpass } from "next/font/google";
 import "./globals.css";
+import SubLayout from "./components/layouts/subLayout";
 
 const overpass = Overpass({
   subsets: ["latin"],
@@ -17,6 +19,7 @@ const acorn = localFont({
 export const metadata: Metadata = {
   title: "Aman Dang",
   description: "A product-motivated software engineer from India",
+  icons: [{ rel: "icon", url: Favicon.src }],
 };
 
 export default function RootLayout({
@@ -25,8 +28,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${overpass.variable} ${acorn.variable}`}>
-      <body>{children}</body>
+    <html lang="en" className={`${overpass.variable} ${acorn.variable} `}>
+      <body>
+        <SubLayout>{children}</SubLayout>
+      </body>
     </html>
   );
 }

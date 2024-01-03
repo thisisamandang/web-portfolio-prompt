@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -11,4 +10,35 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+.fade-on-appear {
+  animation: fadein 0.5s;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.glassmorphic {
+  background: linear-gradient(
+    112.83deg,
+    rgba(255, 255, 255, 0.75) 0%,
+    rgba(255, 255, 255, 0.8) 110.84%
+  );
+  border: 1.5px solid #ffffff;
+  filter: none;
+  backdrop-filter: blur(21px);
+}
+
+.glassmorphic {
+  background: linear-gradient(
+    112.83deg,
+    rgba(255, 255, 255, 0.75) 0%,
+    rgba(255, 255, 255, 0.8) 110.84%
+  );
+  filter: none;
+  backdrop-filter: blur(21px);
 }
