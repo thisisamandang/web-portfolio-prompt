@@ -16,10 +16,10 @@ const page = (props: Props) => {
             I&apos;m a senior year computer science student from India.
           </h1>
           <p className="font-mono text-[#025a4e]">
-            In 2019, I took on a project to create a reservation system for my
-            high school and tumbled head first into the rabbit hole of coding,
+            In 2019, I decided to create a ticket reservation system for my
+            high school project and tumbled head first into the rabbit hole of coding,
             eventually steering me towards a major in computer science. Since
-            then, I&apos;ve worked with various technologies and joined multiple
+            then, I&apos;ve worked with various technologies and have participated in multiple
             hackathons.
           </p>
           <p className="font-mono text-[#025a4e]">

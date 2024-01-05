@@ -13,11 +13,11 @@ const MainSection = (props: Props) => {
         Hey, I&apos;m Aman
       </h1>
 
-      <p className="font-mono mt-5 text-center text-lg text-[##4c6763] font-light md:text-xl ">
+      <p className="font-mono mt-5 text-center  text-[#025a4e] text-lg  font-light md:text-xl ">
         an aspiring software engineer
       </p>
 
-      <p className="font-mono text-center  text-lg text-[##4c6763] font-light md:text-xl ">
+      <p className="font-mono text-center  text-[#025a4e]  text-lg  font-light md:text-xl ">
         I aim to build pixel-perfect, accessible products for the web and
         beyond.
       </p>

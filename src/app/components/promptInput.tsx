@@ -52,6 +52,3 @@ const PromptInput = (props: Props) => {
 };
 
 export default PromptInput;
-function setDialog(arg0: boolean) {
-  throw new Error("Function not implemented.");
-}

@@ -2,7 +2,11 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
 
-type Props = { inputValue: string; setDialog: (arg0: boolean) => void };
+type Props = {
+  inputValue: string;
+  setInputValue: (arg0: string) => void;
+  setDialog: (arg0: boolean) => void;
+};
 
 const NavDialog = (props: Props) => {
   const navLinks = [
@@ -18,7 +22,6 @@ const NavDialog = (props: Props) => {
       title: "/Contact",
       link: "/contact",
     },
-
     {
       title: "/Resumé",
       link: "/resume",
@@ -32,15 +35,23 @@ const NavDialog = (props: Props) => {
     if (filteredLinks.length === 0) {
       props.setDialog(false);
     }
-  }, [filteredLinks]);
+  }, [filteredLinks, props]);
+
+  const handleLinkClick = () => {
+    // Set dialog to false when a link is clicked
+    props.setDialog(false);
+    props.setInputValue("");
+  };
 
   return (
     <div className="absolute bg-[#EDE7DE] md:bottom-24 bottom-10 mb-2  z-99 fade-on-appear md:w-[48vw] w-[73vw]  border font-mono  border-black rounded-xl  flex flex-col gap-4 items-start ">
-      <ul>
+      <ul className="w-full">
         {filteredLinks.map((link, index) => (
-          <li key={index} className="px-4 py-3 font-mono">
+          <li key={index} className="px-4 py-3  font-mono">
             <Link href={link.link} key={index}>
-              {link.title}
+              <button className="w-full text-left" onClick={handleLinkClick}>
+                {link.title}
+              </button>
             </Link>
           </li>
         ))}
