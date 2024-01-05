@@ -7,16 +7,23 @@ type Props = {};
 
 const SubLayout = ({ children }: { children: React.ReactNode }) => {
   const [dialog, setDialog] = useState<boolean>(false);
+  const [inputValue, setInputValue] = useState("");
 
   return (
-    <div className="h-screen bg-[#EDE7DE] w-screen flex p-4 justify-center items-center">
-        <div className="flex flex-col justify-center items-center border rounded-xl border-black h-full w-full gap-4">
-      <div className="flex flex-col w-full h-full gap-4 lg:mx-4 justify-center items-center">
-          <div>{children}</div>
+    <div className=" md:h-screen bg-[#EDE7DE] w-full flex p-4 justify-center items-center">
+      <div className="flex flex-col h-[90vh] w-full justify-center items-center border rounded-xl border-black md:h-full gap-4">
+        <div className="flex flex-col w-full overflow-y-scroll h-full gap-4 lg:mx-4 justify-center items-center">
+          <div className="w-full h-full flex  items-center justify-center">{children}</div>
 
-          {dialog ? <NavDialog /> : null}
+          {dialog ? (
+            <NavDialog inputValue={inputValue} setDialog={setDialog} />
+          ) : null}
         </div>
-        <PromptInput setDialog={setDialog} />
+        <PromptInput
+          inputValue={inputValue}
+          setDialog={setDialog}
+          setInputValue={setInputValue}
+        />
       </div>
     </div>
   );
