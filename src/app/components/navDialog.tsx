@@ -13,18 +13,22 @@ const NavDialog = (props: Props) => {
     {
       title: "/Work",
       link: "/work",
+      target: "_self",
     },
     {
       title: "/About",
       link: "/about",
+      target: "_self",
     },
-    {
-      title: "/Contact",
-      link: "/contact",
-    },
+    // {
+    //   title: "/Contact",
+    //   link: "/contact",
+    //   target: "_self",
+    // },
     {
       title: "/Resumé",
-      link: "/resume",
+      link: "https://drive.google.com/file/d/1UqTVu06C0bK7UWZRehONPpc1BvSEYYwh/view",
+      target: "_blank",
     },
   ];
   const filteredLinks = navLinks.filter((link) =>
@@ -44,11 +48,11 @@ const NavDialog = (props: Props) => {
   };
 
   return (
-    <div className="absolute bg-[#EDE7DE] md:bottom-24 bottom-10 mb-2  z-99 fade-on-appear md:w-[48vw] w-[73vw]  border font-mono  border-black rounded-xl  flex flex-col gap-4 items-start ">
+    <div className="absolute bg-[#EDE7DE] md:bottom-24 bottom-10 mb-2  z-99 fade-on-appear md:w-[48vw] w-[73vw]  border font-mono  border-black rounded-xl  flex flex-col gap-4  ">
       <ul className="w-full">
         {filteredLinks.map((link, index) => (
           <li key={index} className="px-4 py-3  font-mono">
-            <Link href={link.link} key={index}>
+            <Link href={link.link} key={index} target={link.target}>
               <button className="w-full text-left" onClick={handleLinkClick}>
                 {link.title}
               </button>

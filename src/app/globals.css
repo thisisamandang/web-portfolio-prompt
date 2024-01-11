@@ -23,8 +23,8 @@ body {
   }
 }
 .glassmorphic {
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 2px 8px 32px 0 rgba(206, 206, 206, 0.37);
+  background: rgba(255, 255, 255, 0.107);
+  box-shadow: 0 5px 5px 0 rgba(206, 206, 206, 0.37);
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.5px);
   border-radius: 10px;

@@ -8,7 +8,7 @@ const MainSection = (props: Props) => {
   const [dialog, setDialog] = useState<boolean>(false);
 
   return (
-    <div className=" text-6xl relative flex flex-col  items-center justify-center overflow-hidden grow">
+    <div className="fade-on-appear text-6xl relative flex flex-col  items-center justify-center overflow-hidden grow">
       <h1 className="text-[#025a4e] text-center tracking-wide	 font-sans text-6xl md:text-8xl font-black">
         Hey, I&apos;m Aman
       </h1>

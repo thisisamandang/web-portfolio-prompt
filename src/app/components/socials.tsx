@@ -17,10 +17,7 @@ const Socials = (props: Props) => {
         <Link href="https://www.linkedin.com/in/thisisamandang" target="_blank">
           <FaLinkedin className="w-6 h-6" />
         </Link>
-        <Link
-          href="https://https://www.github.com/thisisamandang"
-          target="_blank"
-        >
+        <Link href="https://www.github.com/thisisamandang" target="_blank">
           <VscGithubAlt className="w-6 h-6" />
         </Link>
         <Link href="https://www.twitter.com/0xamandang" target="_blank">
@@ -30,8 +27,7 @@ const Socials = (props: Props) => {
       {pathname == "/" ? null : (
         <>
           <Link href="/">
-          <BsSlashSquare className="w-6 h-6"/>
-
+             <BsSlashSquare className="w-6 h-6 animate-pulse" />
           </Link>
         </>
       )}

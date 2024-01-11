@@ -17,8 +17,8 @@ type Props = {};
 
 const page = (props: Props) => {
   return (
-    <div className="text-[#035A4E]">
-      <div className="md:w-full   relative flex mt-16 mb-6 md:mt-2 md:mb-16 justify-center  md:grow">
+    <div className="text-[#035A4E] fade-on-appear">
+      <div className="md:w-full   relative flex mt-16 mb-6 md:mt-0 md:mb-16 justify-center  md:grow">
         <h1 className="  tracking-wide font-sans text-6xl md:text-8xl font-black">
           I&apos;m Aman.
         </h1>
