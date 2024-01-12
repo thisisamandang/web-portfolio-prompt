@@ -42,13 +42,12 @@ const NavDialog = (props: Props) => {
   }, [filteredLinks, props]);
 
   const handleLinkClick = () => {
-    // Set dialog to false when a link is clicked
     props.setDialog(false);
     props.setInputValue("");
   };
 
   return (
-    <div className="absolute bg-[#EDE7DE] md:bottom-24 bottom-10 mb-2  z-99 fade-on-appear md:w-[48vw] w-[73vw]  border font-mono  border-black rounded-xl  flex flex-col gap-4  ">
+    <div className="absolute bg-[#EDE7DE] md:bottom-24 bottom-[5.5rem] mb-2  z-99 fade-on-appear md:w-[48vw] w-[73vw]  border font-mono  border-black rounded-xl  flex flex-col gap-4  ">
       <ul className="w-full">
         {filteredLinks.map((link, index) => (
           <li key={index} className="px-4 py-3  font-mono">
