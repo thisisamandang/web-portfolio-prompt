@@ -17,8 +17,8 @@ type Props = {};
 
 const page = (props: Props) => {
   return (
-    <div className="text-[#035A4E] fade-on-appear">
-      <div className="md:w-full   relative flex mt-16 mb-6 md:mt-0 md:mb-16 justify-center  md:grow">
+    <div className="text-[#035A4E] h-full overflow-y-scroll fade-on-appear">
+      <div className="md:w-full  relative flex mt-16 mb-6 md:mt-0 md:mb-16 justify-center  md:grow">
         <h1 className="  tracking-wide font-sans text-6xl md:text-8xl font-black">
           I&apos;m Aman.
         </h1>
@@ -42,19 +42,18 @@ const page = (props: Props) => {
             and motivated.
           </p>
         </div>
-        <div className="flex-1 flex flex-col gap-5  rounded-2xl ">
-          <h1 className="  tracking-wide	 font-sans text-4xl md:text-6xl font-medium">
+        <div className="flex-1 flex flex-col gap-5 items-center justify-center ">
+          {/* <div className="flex flex-col items-center justify-center"> */}
+          <h1 className=" text-left tracking-wide md:text-right	font-sans text-4xl md:text-6xl font-medium">
             Technical Skills
           </h1>
-          <p className="font-mono ">
-            Throughout my academic journey, I&apos;ve had the opportunity to
-            explore and master various languages & frameworks.
-          </p>
-          <div className=" glassmorphic h-1/2 p-5 flex flex-col gap-5 text-gray-700 rounded-2xl">
+
+          {/* </div> */}
+          <div className=" glassmorphic h-1/2 w-3/4 md:w-full p-5 flex flex-col gap-5 text-gray-700 rounded-2xl">
             <div className="flex items-center gap-5 justify-center">
               <RiJavascriptLine className="h-12 w-11 " />
               <TbBrandTypescript className="h-11 w-11 " />
-              <FaGolang className="h-11 w-11  " />
+              <FaGolang className="h-11 w-11" />
             </div>
             <div className="flex items-center gap-5 justify-center">
               <FaReact className="h-11 w-11" />

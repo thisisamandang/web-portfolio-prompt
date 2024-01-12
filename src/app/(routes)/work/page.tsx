@@ -37,8 +37,8 @@ const page = (props: Props) => {
   ];
 
   return (
-    <div className="fade-on-appear text-[#035A4E]">
-      <div className="md:w-full   relative flex  mb-6   justify-center  md:grow">
+    <div className="fade-on-appear mt-12 overflow-y-scroll h-full text-[#035A4E]">
+      <div className="md:w-full relative flex mb-6 justify-center md:grow">
         <h1 className="  tracking-wide font-sans text-6xl md:text-8xl font-black">
           Work.
         </h1>
@@ -48,8 +48,8 @@ const page = (props: Props) => {
           <h1 className=" tracking-wide	 font-sans text-4xl md:text-6xl font-medium">
             Experience
           </h1>
-          <div className="flex items-start gap-4">
-            <p className="font-mono  font-semibold">Aug 2023 - Nov 2023</p>
+          <div className="flex md:flex-row flex-col items-start gap-1 md:gap-4 ">
+            <p className="font-mono md:block hidden font-semibold">Aug 2023 - Nov 2023</p>
 
             <div className="font-mono flex-1 flex flex-col gap-2">
               <div className="font-bold ">
@@ -57,6 +57,7 @@ const page = (props: Props) => {
                 <p className="font-light">
                   <em>Software Engineer Intern </em>
                 </p>
+                <p className="font-mono font-semibold">Aug 2023 - Nov-2023</p>
               </div>
               <p>
                 Spearheaded the development of a Multi-tenant NextJs
@@ -92,14 +93,18 @@ const page = (props: Props) => {
                   <div className="flex-col flex gap-2">
                     <div className="flex gap-2 items-center">
                       <h3>{item.title}</h3>
-                      <MdOutlineArrowOutward className="transform group-hover:scale-125 transition-all duration-100" />
+                      <MdOutlineArrowOutward className="transform hidden md:block group-hover:scale-125 transition-all duration-100" />
                     </div>
-                    <ProjectDescription className="font-mono">
+                    <ProjectDescription className="font-mono md:block hidden text">
                       {item.description}
                     </ProjectDescription>
                   </div>
+                  
                 </Link>
               </ProjectTitle>
+                    <ProjectDescription className="font-mono md:hidden text">
+                      {item.description}
+                    </ProjectDescription>
             </ProjectWrapper>
           ))}
         </div>

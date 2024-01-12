@@ -5,7 +5,7 @@ type Props = {};
 
 const ProjectWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className=" glassmorphic h-1/2 p-5 ml-3 flex flex-col gap-5 text-gray-700 rounded-2xl">
+    <div className=" glassmorphic text-[#035A4E] h-auto md:h-1/2 p-5 md:ml-3 flex flex-col gap-5  rounded-2xl">
       {children}
     </div>
   );
