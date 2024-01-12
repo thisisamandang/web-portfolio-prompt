@@ -5,6 +5,8 @@ import { BsSlashSquare } from "react-icons/bs";
 
 import { VscGithubAlt } from "react-icons/vsc";
 import { FaLinkedin } from "react-icons/fa";
+import { MdOutlineMailOutline } from "react-icons/md";
+
 import { FaXTwitter } from "react-icons/fa6";
 type Props = {};
 
@@ -23,6 +25,7 @@ const Socials = (props: Props) => {
         <Link href="https://www.twitter.com/0xamandang" target="_blank">
           <FaXTwitter className="w-6 h-6" />
         </Link>
+        <Link href="mailto:work.amandang@gmail.com"><MdOutlineMailOutline className="w-6 h-6"/></Link>
       </div>
       {pathname == "/" ? null : (
         <>
